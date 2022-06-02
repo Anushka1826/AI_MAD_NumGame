@@ -108,6 +108,20 @@ public class MainActivity extends AppCompatActivity {
             button3.setText(rnd1-rnd2+" ");
             button4.setText(rnd1*rnd2+" ");
         }
+        else if(correctButton==2){
+            if (operator.equals("-")) {
+                button3.setText(operand1 - operand2 + " ");
+            } else if (operator.equals("+")) {
+                button3.setText(operand1 + operand2 + " ");
+            } else if (operator.equals("*")) {
+                button3.setText(operand1 * operand2 + " ");
+            } else {
+                button3.setText(operand1 / operand2 + " ");
+            }
+            button1.setText(rnd1+rnd2+" ");
+            button2.setText(rnd1-rnd2+" ");
+            button4.setText(rnd1*rnd2+" ");
+        }
         
         if(matchCounter==3){    // if three matches are completed updatee the perfomrance in sharedpreferences
 
