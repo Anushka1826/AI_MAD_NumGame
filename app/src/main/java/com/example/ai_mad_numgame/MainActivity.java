@@ -76,9 +76,39 @@ public class MainActivity extends AppCompatActivity {
         //check is operand2 is not zero; otherwise in case of division-divide by zero error will come
         String operator = operators[random.nextInt(4)];
         textView2.setText(operand1 + operator + operand2);
+        int rnd1 = random.nextInt(10);
+        int rnd2 = random.nextInt(20);
 
       // Your code here, to diplay correct and incorrect options on the buttons
-
+        if(correctButton==0) {
+            if (operator.equals("-")) {
+                button1.setText(operand1 - operand2 + " ");
+            } else if (operator.equals("+")) {
+                button1.setText(operand1 + operand2 + " ");
+            } else if (operator.equals("*")) {
+                button1.setText(operand1 * operand2 + " ");
+            } else {
+                button1.setText(operand1 / operand2 + " ");
+            }
+            button2.setText(rnd1+rnd2+" ");
+            button3.setText(rnd1-rnd2+" ");
+            button4.setText(rnd1*rnd2+" ");
+        }
+        else if(correctButton==1){
+            if (operator.equals("-")) {
+                button2.setText(operand1 - operand2 + " ");
+            } else if (operator.equals("+")) {
+                button2.setText(operand1 + operand2 + " ");
+            } else if (operator.equals("*")) {
+                button2.setText(operand1 * operand2 + " ");
+            } else {
+                button2.setText(operand1 / operand2 + " ");
+            }
+            button1.setText(rnd1+rnd2+" ");
+            button3.setText(rnd1-rnd2+" ");
+            button4.setText(rnd1*rnd2+" ");
+        }
+        
         if(matchCounter==3){    // if three matches are completed updatee the perfomrance in sharedpreferences
 
             matchCounter=0;
